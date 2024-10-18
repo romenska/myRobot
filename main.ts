@@ -3,6 +3,15 @@ input.onButtonPressed(Button.A, function () {
     IsLeg = 0
     IsFoot = 1
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.showIcon(IconNames.Happy)
+    IsLeg = 0
+    IsFoot = 0
+    pins.servoWritePin(AnalogPin.P0, 90)
+    pins.servoWritePin(AnalogPin.P1, 90)
+    pins.servoWritePin(AnalogPin.P2, 90)
+    pins.servoWritePin(AnalogPin.P3, 90)
+})
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.SmallHeart)
     IsLeg = 1
@@ -11,11 +20,11 @@ input.onButtonPressed(Button.B, function () {
 let IsFoot = 0
 let IsLeg = 0
 basic.showIcon(IconNames.Happy)
-IsLeg = 0
-IsFoot = 0
+IsLeg = 1
+IsFoot = 1
 let Direct_foot_right = 1
-let Direct_foot_left = -1
-let Direct_leg_right = 1
+let Direct_foot_left = 0
+let Direct_leg_right = 0
 let Direct_leg_left = -1
 let Foot_left = 90
 let Foot_right = 90
